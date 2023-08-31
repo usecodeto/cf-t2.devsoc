@@ -1,0 +1,50 @@
+extends base.pug
+
+block script
+  script
+    include ../static/index.js
+
+
+block style
+  style
+    include ../static/style.css 
+
+block content 
+  table.table.table-strip.table-hover.table-con
+    thead.table-head
+      tr
+        th(scope='col') 
+        th(scope='col') Username
+        th(scope='col') Rating
+    tbody.table
+      tr
+        th(scope='row') 1
+        td Mark
+        td 1200
+      tr
+        th(scope='row') 2
+        td Jacob
+        td 2300
+      tr
+        th(scope='row') 3
+        td Larry the Bird
+        td 1500
+
+  
+  div.box
+    div.question.text-center
+      h1 Are you a Kgpian?
+      button.btn.btn-success.btn-yes Yes
+      button.btn.btn-danger.btn-no NO 
+    div.denyPrompt
+      h1 GO AND CRACK JEE 
+    div.form-box
+      form.form-inline.form-content
+        .form-group.emailBox
+          input.form-control.emailInput(type='text', placeholder='Email')
+          input.form-control-plaintext(type='text', readonly='', value='@kgpian.iitkgp.ac.in')
+        .usernameInput
+          input.form-control(type='text', placeholder='Username')
+        .ratingInput
+          input.form-control(type='number', placeholder='rating')
+        button.btn.btn-primary.submitBtn(type='submit') Get listed on CodeForces
